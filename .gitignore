@@ -1,0 +1,7 @@
+# binaries
+*.exe
+*.out
+*.bin
+
+# build artifacts
+/app
