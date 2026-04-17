@@ -57,7 +57,7 @@ jobs:
 
       - name: Generate image tag
         id: tag
-        run: echo "DATE_TAG=$(date -u -d '+7 hours' +'%Y%m%d-%H%M')-$(git rev-parse --short HEAD)" >> $GITHUB_OUT
+        run: echo "DATE_TAG=$(TZ=Asia/Bangkok date +'%Y%m%d-%H%M')-$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
 
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v5
